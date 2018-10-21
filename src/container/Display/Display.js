@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
 import axios from 'axios';
-import CardContainer from './CardContainer';
+import classes from './Display.css'
+import CardContainer from '../CardContainer';
 
 class Display extends Component {
     state = {
@@ -17,7 +18,7 @@ class Display extends Component {
 
     render () {
         return (
-            <div>
+            <div className={classes.Display}>
                 {this.state.people ? <CardContainer peopleArr={this.state.people}/> : null}
             </div>
         )
