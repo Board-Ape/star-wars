@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
-import titleURL from '../../assets/star-wars-logo.png'
+import titleURL from '../../assets/star-wars-logo.png';
+import audioFile from '../../assets/star-wars-audio.mp3';
 
 class CardContainer extends Component {
     constructor (props) {
@@ -38,6 +39,7 @@ class CardContainer extends Component {
         return (
             <div className={classes.Container}>
                 <div className={classes.Introduction}>
+                    
                     <img alt={'Star Wars Title'} src={titleURL}/>
                     <section className={classes.Intro}>
                         A long time ago, in a galaxy far,<br/> far away....
