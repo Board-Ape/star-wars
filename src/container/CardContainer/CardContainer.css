@@ -1,0 +1,24 @@
+.Container {
+    justify-content: center;
+}
+
+.CardContainer {
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../../assets/night-sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+}
+
+input {
+    margin: 10px;
+}

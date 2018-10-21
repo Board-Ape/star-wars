@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './App.css';
-import Display from './container/Display';
+import Display from './container/Display/Display';
 
 const App = ()  => (
   <div className={classes.App}>
