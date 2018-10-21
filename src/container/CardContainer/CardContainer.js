@@ -43,11 +43,23 @@ class CardContainer extends Component {
                         A long time ago, in a galaxy far,<br/> far away....
                     </section>
                     <div className={classes.Board}>
-                        <div id="content">
-                            <p id="title">Episode I</p>
-                            <p id="subtitle">THE CODER'S MENACE</p>
+                        <div className={classes.Content}>
+                            <p className={classes.Title}>Armoire</p>
+                            <p className={classes.Subtitle}>We believe...</p>
                             <br/>
-                            <p>Turmoil has engulfed the Galactic Republic as Christopher Kade finishes studying to become a master in his trade.</p>
+                            <p>You are today's woman. The world cannot keep up with you. 
+                                You run the show, get sh*t done, and take a stance. 
+                                The power stance. You do not have the time for a dated 
+                                and demanding shopping process. Scrolling, hunting, styling, 
+                                no thank you.</p>
+                            <br/>
+                            <p>As a group of eclectic women ourselves (and a few kick-a** men), 
+                                we understand what it means to be busy, social and simultaneously 
+                                stylish. And we built a solution that finally keeps up.</p>
+                            <br/>
+                            <p>Go conquer the world — we will make sure you look damn good doing it.</p>
+                            <br />
+                            <p>Mission Statement Credit: Armoire (link: https://www.armoire.style/team/) </p>
                       </div>
                     </div>
                 </div>
