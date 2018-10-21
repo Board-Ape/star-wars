@@ -39,6 +39,25 @@
     }
 }
 
+.Outro {
+    color: rgb(75, 213, 238);
+    animation: outro 6s linear 37s;;
+    font-size: 250%;
+    opacity: 0;
+}
+
+@keyframes outro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 p {
   color: #FFFF82;
 }
