@@ -13,12 +13,112 @@
     background-size: cover;
 }
 
+.Introduction {
+    height: 100vh;
+}
+
+.Intro {
+    color: rgb(75, 213, 238);
+    animation: intro 6s ease-out 1s;
+    font-size: 250%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+p {
+  color: #FFFF82;
+}
+
+.Board {
+    font-family: 'Carrois Gothic SC', sans-serif;  
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: center;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 130%;
+    width: 18em;
+    bottom: 20px;
+    left: 50%;
+}
+
+.Board:after {
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Set the scrolling animation and position it */
+.Content {
+    animation: scroll 30s linear 7s;
+    position: absolute;
+    top: 100%;
+}
+
+.Title, .Subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+
 img {
-    width: 80%;
     height: 50vh;
     margin: auto;
 }
 
 input {
-    margin: 10px;
+    margin: 0 20px 40px 20px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid yellow;
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+input:hover {
+    background-color: yellow;
+    color: black;
+}
+
+button {
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid yellow;
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
 }

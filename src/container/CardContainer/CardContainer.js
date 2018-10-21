@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
-import titleURL from '../../assets/star-wars-logo.png'
+import titleURL from '../../assets/star-wars-logo.png';
+import audioFile from '../../assets/star-wars-audio.mp3';
 
 class CardContainer extends Component {
     constructor (props) {
@@ -37,9 +38,36 @@ class CardContainer extends Component {
 
         return (
             <div className={classes.Container}>
-                <img alt={'Star Wars Title'} src={titleURL}/>
+                <div className={classes.Introduction}>
+                    
+                    <img alt={'Star Wars Title'} src={titleURL}/>
+                    <section className={classes.Intro}>
+                        A long time ago, in a galaxy far,<br/> far away....
+                    </section>
+                    <div className={classes.Board}>
+                        <div className={classes.Content}>
+                            <p className={classes.Title}>Armoire</p>
+                            <p className={classes.Subtitle}>We believe...</p>
+                            <br/>
+                            <p>You are today's woman. The world cannot keep up with you. 
+                                You run the show, get sh*t done, and take a stance. 
+                                The power stance. You do not have the time for a dated 
+                                and demanding shopping process. Scrolling, hunting, styling, 
+                                no thank you.</p>
+                            <br/>
+                            <p>As a group of eclectic women ourselves (and a few kick-a** men), 
+                                we understand what it means to be busy, social and simultaneously 
+                                stylish. And we built a solution that finally keeps up.</p>
+                            <br/>
+                            <p>Go conquer the world — we will make sure you look damn good doing it.</p>
+                            <br />
+                            <p>Mission Statement Credit: Armoire (link: https://www.armoire.style/team/) </p>
+                      </div>
+                    </div>
+                </div>
                 <div>
                     <input 
+                        placeholder={'Search'}
                         value={this.state.userSearch}
                         onChange={this.updateUserSearchHandler}/>
                     <button onClick={this.sendStringHandler}>SUBMIT</button>
@@ -53,24 +81,3 @@ class CardContainer extends Component {
 }
 
 export default CardContainer;
-
-// (10)[{ … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }]
-// 0:
-// birth_year: "19BBY"
-// created: "2014-12-09T13:50:51.644000Z"
-// edited: "2014-12-20T21:17:56.891000Z"
-// eye_color: "blue"
-// films: (5)["https://swapi.co/api/films/2/", "https://swapi.co/api/films/6/", "https://swapi.co/api/films/3/", "https://swapi.co/api/films/1/", "https://swapi.co/api/films/7/"]
-// gender: "male"
-// hair_color: "blond"
-// height: "172"
-// homeworld: "https://swapi.co/api/planets/1/"
-// mass: "77"
-// name: "Luke Skywalker"
-// skin_color: "fair"
-// species: ["https://swapi.co/api/species/1/"]
-// starships: (2)["https://swapi.co/api/starships/12/", "https://swapi.co/api/starships/22/"]
-// url: "https://swapi.co/api/people/1/"
-// vehicles: (2)["https://swapi.co/api/vehicles/14/", "https://swapi.co/api/vehicles/30/"]
-// __proto__: Object
-// 1: { name: "C-3PO", height: "167", mass: "75", hair_color: "n/a", skin_color: "gold", … }

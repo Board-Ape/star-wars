@@ -17,9 +17,3 @@ const card = (props) => {
 }
 
 export default card;
-
-// name = { person.name }
-// gender = { person.gender }
-// hair = { person['hair_color'] }
-// height = { person.height }
-// mass = { person.mass }
