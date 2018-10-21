@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Sound from 'react-sound';
 
 import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
@@ -6,9 +7,6 @@ import titleURL from '../../assets/star-wars-logo.png';
 import audioFile from '../../assets/star-wars-audio.mp3';
 
 class CardContainer extends Component {
-    constructor (props) {
-        super (props)
-    }
     state = {
         userSearch: ''
     }
@@ -39,7 +37,14 @@ class CardContainer extends Component {
         return (
             <div className={classes.Container}>
                 <div className={classes.Introduction}>
-                    
+                    <Sound
+                        url={audioFile}
+                        playStatus={Sound.status.PLAYING}
+                        playFromPosition={300 /* in milliseconds */}
+                        onLoading={this.handleSongLoading}
+                        onPlaying={this.handleSongPlaying}
+                        onFinishedPlaying={this.handleSongFinishedPlaying}
+                    />
                     <img alt={'Star Wars Title'} src={titleURL}/>
                     <section className={classes.Intro}>
                         A long time ago, in a galaxy far,<br/> far away....
@@ -64,6 +69,9 @@ class CardContainer extends Component {
                             <p>Mission Statement Credit: Armoire (link: https://www.armoire.style/team/) </p>
                       </div>
                     </div>
+                    <section className={classes.Outro}>
+                        Scroll Down To Explore And Search For Characters
+                    </section>
                 </div>
                 <div>
                     <input 
