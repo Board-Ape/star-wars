@@ -21,13 +21,27 @@ class Display extends Component {
     }
 
     searchUpdateHandler = (searchString) => {
+        const noMatchData = [
+            { 
+                name: 'NO MATCH FOUND, PLEASE TRY ANOTHER',
+                gender: 'n/a',
+                hair_color: 'n/a',
+                height: 'n/a',
+                mass: 'n/a'
+            }
+        ]
+
         axios.get('https://swapi.co/api/people', {
                 params: {
                     search: searchString
                 }
             })
             .then(response => {
-                this.setState({people: response.data.results})
+                if (response.data.count < 1) {
+                    this.setState({people: noMatchData})
+                } else {
+                    this.setState({people: response.data.results})
+                }
             })
             .catch(error => {
                 this.setState({error: error})
