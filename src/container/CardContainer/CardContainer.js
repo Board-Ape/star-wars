@@ -4,12 +4,15 @@ import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
 
 const cardContainer = (props) => {
-    const cards = props.peopleArr.map(person => {
+    const cards = props.peopleArr.map((person, index) => {
         return (
                 <Card
+                    key={index}
                     name={person.name}
                     gender={person.gender}
-                    
+                    hair={person['hair_color']}
+                    height={person.height}
+                    mass={person.mass}
                 />
         )
     })
