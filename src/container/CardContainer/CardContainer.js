@@ -1,18 +1,21 @@
 import React from 'react';
 
+import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
 
 const cardContainer = (props) => {
     const cards = props.peopleArr.map(person => {
         return (
-            <Card 
-                name={person.name}
-            />
+                <Card
+                    name={person.name}
+                    gender={person.gender}
+                    
+                />
         )
     })
 
     return (
-        <div>
+        <div className={classes.CardContainer}>
             { cards }
         </div>
     )
