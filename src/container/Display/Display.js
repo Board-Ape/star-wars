@@ -22,6 +22,7 @@ class Display extends Component {
 
     searchUpdateHandler = (searchString) => {
         console.log(searchString)
+        
     }
 
     render () {
