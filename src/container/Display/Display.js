@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import axios from 'axios';
 import classes from './Display.css'
-import CardContainer from '../CardContainer';
+import CardContainer from '../CardContainer/CardContainer';
 
 class Display extends Component {
     state = {
