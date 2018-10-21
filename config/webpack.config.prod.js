@@ -340,6 +340,9 @@ module.exports = {
             exclude: cssModuleRegex,
             loader: getStyleLoaders({
               importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+              minimize: true,
               sourceMap: shouldUseSourceMap,
             }),
             // Don't consider CSS imports dead code even if the
