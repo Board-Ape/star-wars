@@ -21,8 +21,17 @@ class Display extends Component {
     }
 
     searchUpdateHandler = (searchString) => {
-        console.log(searchString)
-        
+        axios.get('https://swapi.co/api/people', {
+                params: {
+                    search: searchString
+                }
+            })
+            .then(response => {
+                this.setState({people: response.data.results})
+            })
+            .catch(error => {
+                this.setState({error: error})
+            })
     }
 
     render () {

@@ -40,6 +40,7 @@ class CardContainer extends Component {
                 <img alt={'Star Wars Title'} src={titleURL}/>
                 <div>
                     <input 
+                        placeholder={'Search'}
                         value={this.state.userSearch}
                         onChange={this.updateUserSearchHandler}/>
                     <button onClick={this.sendStringHandler}>SUBMIT</button>
