@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import styles from './App.css';
 import Display from './container/Display';
 
 const App = ()  => (
-  <div className="App">
+  <div className={styles.App}>
     <Display />
   </div>
 )
