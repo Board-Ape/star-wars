@@ -4,6 +4,7 @@
     border: 1px solid yellow;
     color: yellow;
     background-color: black; 
+    border-radius: 5px;
 }
 
 h2 {

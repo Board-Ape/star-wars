@@ -37,7 +37,20 @@ class CardContainer extends Component {
 
         return (
             <div className={classes.Container}>
-                <img alt={'Star Wars Title'} src={titleURL}/>
+                <div className={classes.Introduction}>
+                    <img alt={'Star Wars Title'} src={titleURL}/>
+                    <section className={classes.Intro}>
+                        A long time ago, in a galaxy far,<br/> far away....
+                    </section>
+                    <div className={classes.Board}>
+                        <div id="content">
+                            <p id="title">Episode I</p>
+                            <p id="subtitle">THE CODER'S MENACE</p>
+                            <br/>
+                            <p>Turmoil has engulfed the Galactic Republic as Christopher Kade finishes studying to become a master in his trade.</p>
+                      </div>
+                    </div>
+                </div>
                 <div>
                     <input 
                         placeholder={'Search'}
@@ -54,24 +67,3 @@ class CardContainer extends Component {
 }
 
 export default CardContainer;
-
-// (10)[{ … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }]
-// 0:
-// birth_year: "19BBY"
-// created: "2014-12-09T13:50:51.644000Z"
-// edited: "2014-12-20T21:17:56.891000Z"
-// eye_color: "blue"
-// films: (5)["https://swapi.co/api/films/2/", "https://swapi.co/api/films/6/", "https://swapi.co/api/films/3/", "https://swapi.co/api/films/1/", "https://swapi.co/api/films/7/"]
-// gender: "male"
-// hair_color: "blond"
-// height: "172"
-// homeworld: "https://swapi.co/api/planets/1/"
-// mass: "77"
-// name: "Luke Skywalker"
-// skin_color: "fair"
-// species: ["https://swapi.co/api/species/1/"]
-// starships: (2)["https://swapi.co/api/starships/12/", "https://swapi.co/api/starships/22/"]
-// url: "https://swapi.co/api/people/1/"
-// vehicles: (2)["https://swapi.co/api/vehicles/14/", "https://swapi.co/api/vehicles/30/"]
-// __proto__: Object
-// 1: { name: "C-3PO", height: "167", mass: "75", hair_color: "n/a", skin_color: "gold", … }

@@ -13,8 +13,82 @@
     background-size: cover;
 }
 
+.Introduction {
+    height: 100vh;
+}
+
+.Intro {
+    color: rgb(75, 213, 238);
+    animation: intro 6s ease-out 1s;
+    font-size: 250%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+p {
+  color: #FFFF82;
+}
+
+.Board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 50%;
+}
+
+.Board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 100s linear 16s;
+  position: absolute;
+  top: 100%;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+
 img {
-    width: 80%;
     height: 50vh;
     margin: auto;
 }
