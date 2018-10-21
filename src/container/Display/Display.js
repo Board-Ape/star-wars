@@ -6,7 +6,8 @@ import CardContainer from '../CardContainer/CardContainer';
 
 class Display extends Component {
     state = {
-        people: null
+        people: null,
+        error: null
     }
 
     componentDidMount () {
@@ -14,12 +15,23 @@ class Display extends Component {
             .then(response => {
                 this.setState({people: response.data.results})
             })
+            .catch(error => {
+                this.setState({error: error})
+            })
+    }
+
+    searchUpdateHandler = (searchString) => {
+        console.log(searchString)
     }
 
     render () {
         return (
             <div className={classes.Display}>
-                {this.state.people ? <CardContainer peopleArr={this.state.people}/> : null}
+                {this.state.people 
+                    ? <CardContainer
+                        searchUpdate={this.searchUpdateHandler} 
+                        peopleArr={this.state.people}/> 
+                    : null}
             </div>
         )
     }

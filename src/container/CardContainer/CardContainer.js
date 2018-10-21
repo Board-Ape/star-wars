@@ -1,11 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import classes from './CardContainer.css';
 import Card from '../../components/Card/Card';
+import titleURL from '../../assets/star-wars-logo.png'
 
-const cardContainer = (props) => {
-    const cards = props.peopleArr.map((person, index) => {
-        return (
+class CardContainer extends Component {
+    constructor (props) {
+        super (props)
+    }
+    state = {
+        userSearch: ''
+    }
+
+    updateUserSearchHandler = (event) => {
+        this.setState({userSearch: event.target.value})
+    }
+
+    sendStringHandler = () => {
+        const searchString = this.state.userSearch
+        this.props.searchUpdate(searchString)
+    }
+
+    render () {
+        const cards = this.props.peopleArr.map((person, index) => {
+            return (
                 <Card
                     key={index}
                     name={person.name}
@@ -14,17 +32,27 @@ const cardContainer = (props) => {
                     height={person.height}
                     mass={person.mass}
                 />
-        )
-    })
+            )
+        });
 
-    return (
-        <div className={classes.CardContainer}>
-            { cards }
-        </div>
-    )
+        return (
+            <div className={classes.Container}>
+                <img alt={'Star Wars Title'} src={titleURL}/>
+                <div>
+                    <input 
+                        value={this.state.userSearch}
+                        onChange={this.updateUserSearchHandler}/>
+                    <button onClick={this.sendStringHandler}>SUBMIT</button>
+                </div>
+                <div className={classes.CardContainer}>
+                { cards }
+                </div>
+            </div>
+        )
+    }
 }
 
-export default cardContainer;
+export default CardContainer;
 
 // (10)[{ … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }, { … }]
 // 0:
