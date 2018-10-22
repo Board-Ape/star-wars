@@ -47,7 +47,8 @@ class CardContainer extends Component {
                     />
                     <img alt={'Star Wars Title'} src={titleURL}/>
                     <section className={classes.Intro}>
-                        A long time ago, in a galaxy far,<br/> far away....
+                        A long time ago, in a galaxy far,
+                        <br/> far away....
                     </section>
                     <div className={classes.Board}>
                         <div className={classes.Content}>

@@ -8,6 +8,7 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    background-color: black;
     background-image: url('../../assets/night-sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,6 +23,7 @@
     animation: intro 6s ease-out 1s;
     font-size: 250%;
     opacity: 0;
+    text-align: center;
 }
 
 @keyframes intro {
@@ -87,7 +89,6 @@ p {
     top: 0;
 }
 
-/* Set the scrolling animation and position it */
 .Content {
     animation: scroll 30s linear 7s;
     position: absolute;
@@ -142,4 +143,41 @@ button:hover {
     background-color: yellow;
     color: black;
     cursor: pointer;
+}
+
+@media (max-width: 615px) {
+    img {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 500px) {
+    img {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 440px) {
+    img {
+        height: 20vh;
+    }
+
+    .Intro {
+        width: 90%;
+        font-size: 150%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+    }
+
+    .Outro {
+        font-size: 150%;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
